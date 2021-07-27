@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import HornedBeasts from "./HornedBeast";
-import "bootstrap/dist/css/bootstrap.min.css";
+import HornedBeasts from './HornedBeast';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import Image from "react-bootstrap/Image";
-import Container from "react-bootstrap/Container";
+import Container from 'react-bootstrap/Container';
 
-import Row from "react-bootstrap/Row";
+import Row from 'react-bootstrap/Row';
 
-import data from "./lab.json";
+import data from './lab.json';
 console.log(data);
 
 class Main extends React.Component {
