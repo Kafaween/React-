@@ -1,10 +1,10 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Image from "react-bootstrap/Image";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'react-bootstrap/Image';
 // import Container from "react-bootstrap/Container";
 
 // import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import Col from 'react-bootstrap/Col';
 
 class HornedBeast extends React.Component {
   constructor(props) {
@@ -25,9 +25,9 @@ class HornedBeast extends React.Component {
     return (
       <Col md={4}>
         <h2>{this.props.title}</h2>
-        <div className="">
+        <div className=''>
           <Image
-            className="w-100  h-100"
+            className='w-100  h-100'
             fluid
             onClick={this.onclick}
             src={this.props.url}
