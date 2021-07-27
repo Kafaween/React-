@@ -1,8 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from 'react-bootstrap/Image';
-// import Container from "react-bootstrap/Container";
+import Card from 'react-bootstrap/Card';
 
+// import Image from 'react-bootstrap/Image';
+// import Container from "react-bootstrap/Container";
+// import Modal from 'react-bootstrap/Modal';
 // import Row from "react-bootstrap/Row";
 import Col from 'react-bootstrap/Col';
 
@@ -19,14 +21,18 @@ class HornedBeast extends React.Component {
     this.setState({
       counter: this.state.counter + 1,
     });
+    this.props.x({
+      title: this.props.title,
+      url: this.props.url,
+      des: this.props.des,
+    });
   };
 
   render() {
     return (
       <Col md={4}>
-        <h2>{this.props.title}</h2>
-        <div className=''>
-          <Image
+        <Card style={{ width: '18rem' }}>
+          <Card.Img
             className='w-100  h-100'
             fluid
             onClick={this.onclick}
@@ -34,9 +40,12 @@ class HornedBeast extends React.Component {
             alt={this.props.alt}
             title={this.props.title}
           />
-        </div>
-        <p>{this.props.des}</p>
-        <p>favaroited : {this.state.counter}</p>
+          <Card.Body>
+            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Text>{this.props.des}</Card.Text>
+            <Card.Text>favaroited : {this.state.counter}</Card.Text>
+          </Card.Body>
+        </Card>
       </Col>
     );
   }
