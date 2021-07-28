@@ -27,7 +27,8 @@ class Main extends React.Component {
                   des={element.description}
                   url={element.image_url}
                   alt={element.keyword}
-                  pass={this.Showmodal}
+                  handledata={this.props.handledata}
+                  handleShow={this.props.handleShow}
                 />
               );
             })}

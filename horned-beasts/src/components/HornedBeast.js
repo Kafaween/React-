@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
+// import SelectedBeast from './SelectedBeast';
 
 // import Image from 'react-bootstrap/Image';
 // import Container from "react-bootstrap/Container";
@@ -21,7 +22,8 @@ class HornedBeast extends React.Component {
     this.setState({
       counter: this.state.counter + 1,
     });
-    this.props.x({
+    this.props.handleShow();
+    this.props.handledata({
       title: this.props.title,
       url: this.props.url,
       des: this.props.des,
