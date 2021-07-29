@@ -5,6 +5,7 @@ const options = [
   { value: 1, label: 'one' },
   { value: 2, label: 'two' },
   { value: 3, label: 'three' },
+  { value: 100, label: 'onehundred' },
 ];
 export class Drop extends Component {
   handldrop = (event) => {

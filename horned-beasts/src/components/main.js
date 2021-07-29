@@ -22,7 +22,7 @@ class Main extends React.Component {
 
             {this.props.d.map((element) => {
               console.log(this.props.choosen);
-              if (this.props.choosen > 3) {
+              if (this.props.choosen === 4) {
                 return (
                   <HornedBeasts
                     title={element.title}
