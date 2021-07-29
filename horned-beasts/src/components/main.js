@@ -21,16 +21,32 @@ class Main extends React.Component {
         /> */}
 
             {this.props.d.map((element) => {
-              return (
-                <HornedBeasts
-                  title={element.title}
-                  des={element.description}
-                  url={element.image_url}
-                  alt={element.keyword}
-                  handledata={this.props.handledata}
-                  handleShow={this.props.handleShow}
-                />
-              );
+              console.log(this.props.choosen);
+              if (this.props.choosen > 3) {
+                return (
+                  <HornedBeasts
+                    title={element.title}
+                    des={element.description}
+                    url={element.image_url}
+                    alt={element.keyword}
+                    horn={element.horns}
+                    handledata={this.props.handledata}
+                    handleShow={this.props.handleShow}
+                  />
+                );
+              } else if (element.horns === this.props.choosen) {
+                return (
+                  <HornedBeasts
+                    title={element.title}
+                    des={element.description}
+                    url={element.image_url}
+                    alt={element.keyword}
+                    horn={element.horns}
+                    handledata={this.props.handledata}
+                    handleShow={this.props.handleShow}
+                  />
+                );
+              }
             })}
           </Row>
         </Container>

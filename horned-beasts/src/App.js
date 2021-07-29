@@ -4,6 +4,7 @@ import Main from './components/main';
 import Footer from './components/footer';
 import Header from './components/header';
 import data from './components/lab.json';
+import Drop from './components/Drop';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,8 @@ class App extends React.Component {
       title: null,
       url: null,
       des: null,
+      number: 0,
+      choosen: 4,
     };
   }
   handledata = (obj) => {
@@ -33,9 +36,17 @@ class App extends React.Component {
       show: false,
     });
   };
+  chose = (x) => {
+    this.setState({
+      choosen: x,
+    });
+  };
+
   render() {
     return (
       <div>
+        <Drop chose={this.chose} />
+
         <SelectedBeast
           show={this.state.show}
           title={this.state.title}
@@ -45,6 +56,7 @@ class App extends React.Component {
         />
         <Header title='this is header' />
         <Main
+          choosen={this.state.choosen}
           d={data}
           handledata={this.handledata}
           handleShow={this.handleShow}
